@@ -1,5 +1,5 @@
 # Polyatomic Quiz
-!pip install chemformula
+# !pip install chemformula
 from IPython.display import display, Markdown
 import random # Import the random module
 
@@ -60,4 +60,5 @@ for ion in ion_names: # Iterate through the shuffled ion names
             break
 
 display(Markdown(f"--- \n## Quiz Over! Final Score: {score}/{len(quiz_data)}"))
+
 
