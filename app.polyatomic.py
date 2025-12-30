@@ -2,7 +2,14 @@
 # !pip install chemformula
 import subprocess
 import sys
-from IPython.display import display, Markdown
+try:
+    from IPython.display import display, Markdown
+except ImportError:
+    # This command installs ipython using the current environment's pip
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "ipython"])
+    # Now try the import again
+    from IPython.display import display, Markdown
+ 
 import random # Import the random module
 
 def format_latex(ion_name, formula_raw):
@@ -62,6 +69,7 @@ for ion in ion_names: # Iterate through the shuffled ion names
             break
 
 display(Markdown(f"--- \n## Quiz Over! Final Score: {score}/{len(quiz_data)}"))
+
 
 
 
