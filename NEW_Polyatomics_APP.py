@@ -5,7 +5,7 @@ import random
 st.set_page_config(page_title="Polyatomic Quiz")
 
 def format_latex(ion_name, formula_raw):
-    """Converts 'SO4 2-' to LaTeX for Streamlit."""
+    """Converts 'XOY Z-' to LaTeX for Streamlit."""
     parts = formula_raw.split()
     base = parts[0]
     # Wrap numbers in subscripts
@@ -79,3 +79,4 @@ else:
             del st.session_state[key]
 
         st.rerun()
+
