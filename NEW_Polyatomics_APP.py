@@ -48,7 +48,7 @@ if not st.session_state.quiz_over:
     st.write(f"What is the formula for **{current_ion}**?")
     
     with st.form(key='quiz_form', clear_on_submit=True):
-        user_input = st.text_input("Type answer (e.g., SO4 2-):").strip()
+        user_input = st.text_input("Type answer (e.g., XO2 4-):").strip()
         submit = st.form_submit_button("Submit")
         
         if submit:
@@ -77,4 +77,5 @@ else:
         # Reset all session states
         for key in list(st.session_state.keys()):
             del st.session_state[key]
+
         st.rerun()
