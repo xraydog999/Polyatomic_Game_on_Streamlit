@@ -80,7 +80,7 @@ else:
     # Update High Score
     if st.session_state.score > st.session_state.high_score:
         st.session_state.high_score = st.session_state.score
-        st.confetti() # A little celebration!
+        st.balloons() # A little celebration!
 
     st.header("Quiz Over!")
     st.write(f"## Final Score: {st.session_state.score}/{len(quiz_data)}")
@@ -90,4 +90,5 @@ else:
         st.session_state.current_index = 0
         random.shuffle(st.session_state.ion_names)
         st.session_state.quiz_over = False
+
         st.rerun()
