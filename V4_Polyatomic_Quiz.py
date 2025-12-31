@@ -55,7 +55,7 @@ st.title("🧪 Polyatomic Ion Challenge")
 # Sidebar Stats
 st.sidebar.metric("🏆 High Score", st.session_state.high_score)
 st.sidebar.write("---")
-st.sidebar.info("Type formulas with a space before the charge (e.g., SO4 2-)")
+st.sidebar.info("Type formulas with a space before the charge (e.g., XO4 3-)")
 
 if not st.session_state.quiz_over:
     # Progress Bar
@@ -151,4 +151,5 @@ else:
         st.session_state.quiz_over = False
         st.session_state.submitted = False
         random.shuffle(st.session_state.ion_names)
+
         st.rerun()
