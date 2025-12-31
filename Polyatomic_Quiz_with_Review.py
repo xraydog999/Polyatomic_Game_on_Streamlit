@@ -58,7 +58,7 @@ if not st.session_state.quiz_over:
     st.write(f"What is the formula for **{current_ion}**?")
     
     with st.form(key='quiz_form', clear_on_submit=True):
-        user_input = st.text_input("Type answer (e.g., SO4 2-):").strip()
+        user_input = st.text_input("Type answer (e.g., XOY Z-):").strip()
         submit = st.form_submit_button("Submit")
         
         if submit:
@@ -106,4 +106,5 @@ else:
         st.session_state.missed_ions = []
         random.shuffle(st.session_state.ion_names)
         st.session_state.quiz_over = False
+
         st.rerun()
